@@ -1,11 +1,15 @@
 <template>
   <div class="icons">
-    <div class="icon" v-for="item of iconList" :key="item.id">
-      <div class="icon-img">
-        <img class="icon-img-content" :src="item.imgUrl" alt="">
-      </div>
-      <p class="icon-desc">{{item.desc}}</p>
-    </div>
+    <swiper>
+      <swiper-slide v-for="(page, index) of pages" :key="index">
+        <div class="icon" v-for="item of page" :key="item.id">
+          <div class="icon-img">
+            <img class="icon-img-content" :src="item.imgUrl" alt="">
+          </div>
+          <p class="icon-desc">{{item.desc}}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -21,24 +25,62 @@ export default {
       },
       {
         id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/48/cb72b99b71974c02.png',
-        desc: '生活休闲'
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+        desc: '一日游'
       },
       {
         id: '0003',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
+        desc: '武汉必游'
+      },
+      {
+        id: '0004',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
         desc: '亲子游'
       },
       {
-        id: '0004',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png',
-        desc: '自然风光'
+        id: '0005',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
+        desc: '游乐场'
       },
       {
-        id: '0005',
+        id: '0006',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
+        desc: '动植物园'
+      },
+      {
+        id: '0007',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
         desc: '踏青赏花'
+      },
+      {
+        id: '0008',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
+        desc: '武汉欢乐谷'
+      },
+      {
+        id: '0009',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
+        desc: '极地海洋'
+      },
+      {
+        id: '0010',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/17/99402a22ce4af302.png',
+        desc: '东湖绿道'
       }]
+    }
+  },
+  computed: {
+    pages () {
+      const pages = []
+      this.iconList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
     }
   }
 }
