@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    城市选择
+    {{selectCity}}
     <router-link to="/">
       <div class="iconfont back-header">&#xe624;</div>
     </router-link>
@@ -8,7 +8,10 @@
 </template>
 <script>
 export default {
-  name: 'CityHeader'
+  name: 'CityHeader',
+  props: {
+    selectCity: String
+  }
 }
 </script>
 <style lang="stylus" scoped>
