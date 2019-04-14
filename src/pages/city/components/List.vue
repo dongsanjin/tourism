@@ -1,6 +1,10 @@
 <template>
   <div>
+
+    <!-- 根据selected的值来显示境内内容还是境外内容  默认为true显示境内内容 -->
     <div v-if="selected">
+
+      <!-- 境内热门城市 -->
       <div class="area popular-city">
         <div class="area-title">
           {{popularCity}}
@@ -9,15 +13,19 @@
           <li class="popular-list" v-for="item of popularCityList" :key="item.id">{{item.listName}}</li>
         </ul>
       </div>
+
+      <!-- 字母排序部分 -->
       <div class="area area-letter">
         <div class="area-title">
           {{letterSort}}
         </div>
-        <ul class="letter-list-wrapper">
-          <li class="letter-list" v-for="item of letterList" :key="item.id">{{item.letterName}}</li>
+        <ul class="letter-list-wrapper wrapper">
+          <li class="letter-list" v-for="item of letterList" :key="item.id" @click="goArea">{{item.letterName}}</li>
         </ul>
       </div>
-      <div class="area all-city" v-for="item of allCityList" :key="item.id">
+
+      <!-- 通过字母来区分的所有境内城市 -->
+      <div class="area all-city" v-for="item of allCityList" :key="item.id"  :ref="item.title" :id="item.title">
         <div class="area-title">
           {{item.title}}
         </div>
@@ -26,7 +34,10 @@
         </ul>
       </div>
     </div>
+
+    <!-- 当selected为false时 -->
     <div v-else>
+      <!-- 热门城市部分 -->
       <div class="area popular-city">
         <div class="area-title">
           {{popularCity}}
@@ -35,6 +46,8 @@
           <li class="popular-list" v-for="item of outerPopularCityList" :key="item.id">{{item.listName}}</li>
         </ul>
       </div>
+
+      <!-- 字母排序部分 -->
       <div class="area area-letter">
         <div class="area-title">
           {{letterSort}}
@@ -43,7 +56,9 @@
           <li class="letter-list" v-for="item of letterList" :key="item.id">{{item.letterName}}</li>
         </ul>
       </div>
-      <div class="area all-city" v-for="item of allCityList" :key="item.id">
+
+      <!-- 通过字母来区分的所有境外城市 -->
+      <div class="area all-city" v-for="item of allCityList" :key="item.id" :id="item.title">
         <div class="area-title">
           {{item.title}}
         </div>
@@ -54,6 +69,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'CityList',
@@ -65,9 +81,21 @@ export default {
     letterList: Array,
     allCityList: Array,
     selected: Boolean
+  },
+  data () {
+    return {
+      goTo: String
+    }
+  },
+  methods: {
+    goArea (el) {
+      const elem = this.$refs[el.target.innerText][0]
+      elem.scrollIntoView(true)
+    }
   }
 }
 </script>
+
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   @import '~styles/mixins.styl'
