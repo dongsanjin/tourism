@@ -10,7 +10,7 @@
           {{popularCity}}
         </div>
         <ul class="popular-list-wrapper">
-          <li class="popular-list" v-for="item of popularCityList" :key="item.id">{{item.listName}}</li>
+          <li class="popular-list" v-for="item of popularCityList" :key="item.id" @click="handleCityClick(item.listName)">{{item.listName}}</li>
         </ul>
       </div>
 
@@ -30,7 +30,8 @@
           {{item.title}}
         </div>
         <ul class="all-city-list-wrapper">
-          <li class="all-list" v-for="list of item.cityList" :key="list.id">{{list.cityName}}</li>
+          <li class="all-list" v-for="list of item.cityList" :key="list.id"
+          @click="handleCityClick(list.cityName)">{{list.cityName}}</li>
         </ul>
       </div>
     </div>
@@ -71,6 +72,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'CityList',
   props: {
@@ -91,7 +94,12 @@ export default {
     goArea (el) {
       const elem = this.$refs[el.target.innerText][0]
       elem.scrollIntoView(true)
-    }
+    },
+    handleCityClick (cityName) {
+      this.changeCity(cityName)
+      this.$router.push('/')
+    },
+    ...mapMutations(['changeCity'])
   }
 }
 </script>
@@ -116,6 +124,8 @@ export default {
       height 100%
       border-left .02rem solid #DDDDDD
       border-right .02rem solid #DDDDDD
+      //设置负值的z-index，防止其覆盖的list元素不能触发点击事件
+      z-index -1
     .popular-list
       width 33.3%
       float left
@@ -155,6 +165,8 @@ export default {
       height 100%
       border-left .02rem solid #DDDDDD
       border-right .02rem solid #DDDDDD
+      //设置负值的z-index，防止其覆盖的list元素不能触发点击事件
+      z-index -1
     &:after
       content: ''
       position absolute
@@ -162,4 +174,6 @@ export default {
       width 25%
       height 100%
       border-left .02rem solid #DDDDDD
+      //设置负值的z-index，防止其覆盖的list元素不能触发点击事件
+      z-index -1
 </style>
