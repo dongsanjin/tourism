@@ -1,0 +1,373 @@
+{
+  "ret": true,
+  "data": {
+    "selectCity" : "城市选择",
+    "popularCity": "热门城市",
+    "popularCityList": [
+      {
+        "id": "001",
+        "listName": "北京"
+      },{
+        "id": "002",
+        "listName": "上海"
+      },{
+        "id": "003",
+        "listName": "三亚"
+      },{
+        "id": "004",
+        "listName": "香港"
+      },{
+        "id": "005",
+        "listName": "杭州"
+      },{
+        "id": "006",
+        "listName": "广州"
+      },{
+        "id": "007",
+        "listName": "成都"
+      },{
+        "id": "008",
+        "listName": "深圳"
+      },{
+        "id": "009",
+        "listName": "苏州"
+      },{
+        "id": "010",
+        "listName": "桂林"
+      },{
+        "id": "011",
+        "listName": "西安"
+      },{
+        "id": "012",
+        "listName": "厦门"
+      }
+    ],
+    "outerPopularCityList":[
+      {
+        "id": "001",
+        "listName": "香港"
+      },{
+        "id": "002",
+        "listName": "澳门"
+      },{
+        "id": "003",
+        "listName": "台湾"
+      },{
+        "id": "004",
+        "listName": "曼谷"
+      },{
+        "id": "005",
+        "listName": "新加坡"
+      },{
+        "id": "006",
+        "listName": "首尔"
+      },{
+        "id": "007",
+        "listName": "东京"
+      },{
+        "id": "008",
+        "listName": "济州岛"
+      },{
+        "id": "009",
+        "listName": "芭提雅"
+      },{
+        "id": "010",
+        "listName": "巴厘岛"
+      },{
+        "id": "011",
+        "listName": "清迈"
+      },{
+        "id": "012",
+        "listName": "悉尼"
+      },{
+        "id": "013",
+        "listName": "大阪"
+      },{
+        "id": "014",
+        "listName": "洛杉矶"
+      },{
+        "id": "015",
+        "listName": "旧金山"
+      },{
+        "id": "016",
+        "listName": "罗马"
+      },{
+        "id": "017",
+        "listName": "巴黎"
+      },{
+        "id": "018",
+        "listName": "伦敦"
+      },{
+        "id": "019",
+        "listName": "米兰"
+      },{
+        "id": "020",
+        "listName": "纽约"
+      }
+    ],
+    "letterSort": "字母排序",
+    "letterList": [
+      {
+        "id": "001",
+        "letterName": "A"
+      },{
+        "id": "002",
+        "letterName": "B"
+      },{
+        "id": "003",
+        "letterName": "C"
+      },{
+        "id": "004",
+        "letterName": "D"
+      },{
+        "id": "005",
+        "letterName": "E"
+      },{
+        "id": "006",
+        "letterName": "F"
+      },{
+        "id": "007",
+        "letterName": "G"
+      },{
+        "id": "008",
+        "letterName": "H"
+      },{
+        "id": "009",
+        "letterName": "J"
+      },{
+        "id": "010",
+        "letterName": "K"
+      },{
+        "id": "011",
+        "letterName": "L"
+      },{
+        "id": "012",
+        "letterName": "M"
+      },{
+        "id": "013",
+        "letterName": "N"
+      },{
+        "id": "014",
+        "letterName": "P"
+      },{
+        "id": "015",
+        "letterName": "Q"
+      },{
+        "id": "016",
+        "letterName": "R"
+      },{
+        "id": "017",
+        "letterName": "S"
+      },{
+        "id": "018",
+        "letterName": "T"
+      },{
+        "id": "019",
+        "letterName": "W"
+      },{
+        "id": "020",
+        "letterName": "X"
+      },{
+        "id": "021",
+        "letterName": "Y"
+      },{
+        "id": "022",
+        "letterName": "Z"
+      }
+    ],
+    "allCityList":[
+      {
+        "title": "A",
+        "id": "0001",
+        "cityList": [
+          {
+            "id": "001",
+            "cityName": "阿坝藏族羌族自治州"
+          },
+          {
+            "id": "002",
+            "cityName": "阿克苏地区"
+          },
+          {
+            "id": "003",
+            "cityName": "阿拉尔"
+          },{
+            "id": "004",
+            "cityName": "阿拉善盟"
+          },{
+            "id": "005",
+            "cityName": "阿勒泰"
+          },{
+            "id": "006",
+            "cityName": "阿里"
+          },{
+            "id": "007",
+            "cityName": "安康"
+          },{
+            "id": "008",
+            "cityName": "安庆"
+          },{
+            "id": "009",
+            "cityName": "安顺"
+          },{
+            "id": "010",
+            "cityName": "安阳"
+          },{
+            "id": "011",
+            "cityName": "鞍山"
+          },{
+            "id": "012",
+            "cityName": "澳门"
+          }
+        ]
+      },
+      {
+        "title": "B",
+        "id": "0002",
+        "cityList": [
+          {
+            "id": "001",
+            "cityName": "巴彦淖尔"
+          },
+          {
+            "id": "002",
+            "cityName": "巴音郭楞"
+          },
+          {
+            "id": "003",
+            "cityName": "巴中"
+          },{
+            "id": "004",
+            "cityName": "白城"
+          },{
+            "id": "005",
+            "cityName": "白沙"
+          },{
+            "id": "006",
+            "cityName": "白山"
+          },{
+            "id": "007",
+            "cityName": "白银"
+          },{
+            "id": "008",
+            "cityName": "百色"
+          },{
+            "id": "009",
+            "cityName": "蚌埠"
+          },{
+            "id": "010",
+            "cityName": "包头"
+          },{
+            "id": "011",
+            "cityName": "宝鸡"
+          },{
+            "id": "012",
+            "cityName": "保定"
+          },{
+            "id": "013",
+            "cityName": "保山"
+          },{
+            "id": "014",
+            "cityName": "保亭"
+          },{
+            "id": "015",
+            "cityName": "北海"
+          },{
+            "id": "016",
+            "cityName": "北京"
+          },{
+            "id": "017",
+            "cityName": "本溪"
+          },{
+            "id": "018",
+            "cityName": "毕节"
+          },{
+            "id": "019",
+            "cityName": "滨州"
+          },{
+            "id": "020",
+            "cityName": "毫州"
+          },{
+            "id": "021",
+            "cityName": "博尔塔拉"
+          }
+        ]
+      },
+      {
+        "title": "C",
+        "id": "0003",
+        "cityList": [
+          {
+            "id": "001",
+            "cityName": "沧州"
+          },
+          {
+            "id": "002",
+            "cityName": "昌都"
+          },
+          {
+            "id": "003",
+            "cityName": "昌吉"
+          },{
+            "id": "004",
+            "cityName": "常德"
+          },{
+            "id": "005",
+            "cityName": "常州"
+          },{
+            "id": "006",
+            "cityName": "巢湖"
+          },{
+            "id": "007",
+            "cityName": "朝阳"
+          },{
+            "id": "008",
+            "cityName": "潮州"
+          },{
+            "id": "009",
+            "cityName": "郴州"
+          },{
+            "id": "010",
+            "cityName": "成都"
+          },{
+            "id": "011",
+            "cityName": "承德"
+          },{
+            "id": "012",
+            "cityName": "澄迈"
+          },{
+            "id": "013",
+            "cityName": "池州"
+          },{
+            "id": "014",
+            "cityName": "赤峰"
+          },{
+            "id": "015",
+            "cityName": "崇左"
+          },{
+            "id": "016",
+            "cityName": "滁州"
+          },{
+            "id": "017",
+            "cityName": "楚雄"
+          },{
+            "id": "018",
+            "cityName": "长春"
+          },{
+            "id": "019",
+            "cityName": "长葛市"
+          },{
+            "id": "020",
+            "cityName": "长沙"
+          },{
+            "id": "021",
+            "cityName": "长治"
+          },{
+            "id": "022",
+            "cityName": "重庆"
+          }
+        ]
+      }
+    ]
+  }
+}

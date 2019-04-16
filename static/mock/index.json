@@ -1,0 +1,67 @@
+{
+  "ret": true,
+  "data": {
+    "swiperOption": {
+      "pagination": ".swiper-pagination",
+      "loop": true
+    },
+    "swiperList": [{
+      "id": "0001",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/eb47a432471be6ac40b69828676479dd.jpg_750x200_207de9c6.jpg"
+    },
+    {
+      "id": "0002",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/f8675864efa49385315a488009f7028a.jpg_750x200_52b0d4bf.jpg"
+    }],
+    "iconList": [{
+      "id": "0001",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+      "desc": "景点门票"
+    },
+    {
+      "id": "0002",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+      "desc": "一日游"
+    },
+    {
+      "id": "0003",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+      "desc": "武汉必游"
+    },
+    {
+      "id": "0004",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
+      "desc": "亲子游"
+    },
+    {
+      "id": "0005",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+      "desc": "游乐场"
+    },
+    {
+      "id": "0006",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+      "desc": "动植物园"
+    },
+    {
+      "id": "0007",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
+      "desc": "踏青赏花"
+    },
+    {
+      "id": "0008",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
+      "desc": "武汉欢乐谷"
+    },
+    {
+      "id": "0009",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
+      "desc": "极地海洋"
+    },
+    {
+      "id": "0010",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/17/99402a22ce4af302.png",
+      "desc": "东湖绿道"
+    }]
+  }
+}
