@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" class="bg-white">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -48,6 +48,8 @@ export default {
     overflow hidden
     height 0
     padding-bottom 50%
+    .bg-white
+      background-color white
     .icon
       position relative
       overflow hidden
