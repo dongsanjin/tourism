@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="clear">
     <div class="title">周末去哪儿</div>
     <ul>
       <li class="attractions" v-for="(item, index) of attractionsList" :key="index">
@@ -58,28 +58,33 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   @import '~styles/mixins.styl'
-  .title
-    height .8rem
-    line-height .8rem
-    text-indent $titleIndent
-    background-color #F5F5F5
-  .attractions-img-wrapper
-    overflow hidden
+  .clear::after
+    content: ''
+    display block
     height 0
-    padding-bottom 37%
-    .attractions-img
-      width 100%
-  .attractions-info
-    height 1rem
-    padding .1rem 0
-    .attractions-title
-      height .6rem
-      line-height .6rem
-      text-indent $descIndent
-    .attractions-desc
-      text-indent $descIndent
-      font-size .24rem
-      color #737373
-      width 82%
-      ellipsis()
+    clear both
+    .title
+      height .8rem
+      line-height .8rem
+      text-indent $titleIndent
+      background-color #F5F5F5
+    .attractions-img-wrapper
+      overflow hidden
+      height 0
+      padding-bottom 37%
+      .attractions-img
+        width 100%
+    .attractions-info
+      height 1rem
+      padding .1rem 0
+      .attractions-title
+        height .6rem
+        line-height .6rem
+        text-indent $descIndent
+      .attractions-desc
+        text-indent $descIndent
+        font-size .24rem
+        color #737373
+        width 82%
+        ellipsis()
 </style>
