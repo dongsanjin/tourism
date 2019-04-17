@@ -63,28 +63,28 @@ export default {
     display block
     height 0
     clear both
-    .title
-      height .8rem
-      line-height .8rem
-      text-indent $titleIndent
-      background-color #F5F5F5
-    .attractions-img-wrapper
-      overflow hidden
-      height 0
-      padding-bottom 37%
-      .attractions-img
-        width 100%
-    .attractions-info
-      height 1rem
-      padding .1rem 0
-      .attractions-title
-        height .6rem
-        line-height .6rem
-        text-indent $descIndent
-      .attractions-desc
-        text-indent $descIndent
-        font-size .24rem
-        color #737373
-        width 82%
-        ellipsis()
+  .title
+    height .8rem
+    line-height .8rem
+    text-indent $titleIndent
+    background-color #F5F5F5
+  .attractions-img-wrapper
+    overflow hidden
+    height 0
+    padding-bottom 37%
+    .attractions-img
+      width 100%
+  .attractions-info
+    height 1rem
+    padding .1rem 0
+    .attractions-title
+      height .6rem
+      line-height .6rem
+      text-indent $descIndent
+    .attractions-desc
+      text-indent $descIndent
+      font-size .24rem
+      color #737373
+      width 82%
+      ellipsis()
 </style>
