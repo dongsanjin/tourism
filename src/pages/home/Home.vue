@@ -3,7 +3,7 @@
     <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
-    <home-list></home-list>
+    <home-list :scrollItem="scrollItem"></home-list>
     <home-weekend></home-weekend>
   </div>
 </template>
@@ -26,7 +26,8 @@ export default {
   data () {
     return {
       swiperList: [],
-      iconList: []
+      iconList: [],
+      scrollItem: []
     }
   },
   methods: {
@@ -40,6 +41,7 @@ export default {
         const data = res.data
         this.swiperList = data.swiperList
         this.iconList = data.iconList
+        this.scrollItem = data.scrollItem
       }
     }
   },

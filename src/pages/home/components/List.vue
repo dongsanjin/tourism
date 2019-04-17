@@ -8,46 +8,25 @@
         <span class="popular-title">本周热门榜单</span>
       </section>
       <section class="all">
-        全部榜单<i class="iconfont">&#xe643;</i>
+        全部榜单<i class="iconfont right">&#xe643;</i>
       </section>
     </section>
     <div class="scroll-wrapper">
       <div class="flex-box" ref="flexBox">
-        <ul class="scroll-box">
-          <li class="scroll-list">
+        <ul class="scroll-box" ref="scrollBox">
+          <li class="scroll-list" ref="scrollList" v-for="item in scrollItem" :key="item.id">
+            <!-- 通过判断是否是前三景点，控制top图标的渲染 -->
+            <template v-if="item.topUrl">
+              <div class="top-box">
+                <img class="top-list" :src="item.topUrl" alt="">
+              </div>
+            </template>
             <div class="img-box">
-              <img class="image" alt="">
+              <img class="img-list" :src="item.imgUrl" alt="">
             </div>
-            <div class="img-desc">
-              <p>户部巷</p>
-              <p><span class="money">￥</span><em class="money money-num">65</em>起</p>
-            </div>
-          </li>
-          <li class="scroll-list">
-            <div class="img-box">
-              <img class="image" alt="">
-            </div>
-            <div class="img-desc">
-              <p>武汉东湖风景区</p>
-              <p><span class="money">￥</span><em class="money money-num">32</em>起</p>
-            </div>
-          </li>
-          <li class="scroll-list">
-            <div class="img-box">
-              <img class="image" alt="">
-            </div>
-            <div class="img-desc">
-              <p>黄鹤楼</p>
-              <p><span class="money">￥</span><em class="money money-num">65</em>起</p>
-            </div>
-          </li>
-          <li class="scroll-list">
-            <div class="img-box">
-              <img class="image" alt="">
-            </div>
-            <div class="img-desc">
-              <p>东湖樱园</p>
-              <p><span class="money">￥</span><em class="money money-num">32</em>起</p>
+            <div class="img-info">
+              <p class="img-desc">{{item.desc}}</p>
+              <p><span class="money">￥</span><em class="money money-num">{{item.money}}</em>起</p>
             </div>
           </li>
         </ul>
@@ -61,11 +40,38 @@ import BScroll from 'better-scroll'
 
 export default {
   name: 'HomeList',
+  props: {
+    scrollItem: Array
+  },
+  data () {
+    return {
+      liSum: 0,
+      ulWidth: 0,
+      liWidth: 116
+    }
+  },
   methods: {
     addScroll () {
-      var srcoll = new BScroll(this.$refs.flexBox, {
-        scrollX: true
+      let srcoll = new BScroll(this.$refs.flexBox, {
+        scrollX: true,
+        eventPassthrough: 'vertical',
+        bounce: false,
+        momentum: true,
+        scrollbar: true
       })
+      let scrollBox = this.$refs.scrollBox
+      let timer = setInterval(() => {
+        this.liSum = scrollBox.childElementCount
+        if (this.liSum) {
+          clearInterval(timer)
+          this.setUlWidth()
+        }
+      }, 500)
+    },
+    setUlWidth () {
+      let scrollBox = this.$refs.scrollBox
+      this.ulWidth = this.liWidth * this.liSum
+      scrollBox.style.width = this.ulWidth + 'px'
     }
   },
   mounted () {
@@ -75,6 +81,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/mixins.styl'
   .outer-wrapper
     padding 0.1rem
     background-color #fff
@@ -99,9 +106,13 @@ export default {
         float right
         height .8rem
         line-height .8rem
-        padding-right .3rem
+        padding-right .2rem
         font-size .24rem
         color #333
+        .right
+          font-size .34rem
+          font-weight bold
+          color #616161
       &::after
         content: ''
         display block
@@ -111,43 +122,52 @@ export default {
       background-color #fff
       margin-top .2rem
       height 0
-      padding-bottom 2.9rem
+      padding-bottom 3rem
       background-size cover
       .flex-box
-        overflow hidden
-        height 2.9rem
+        position relative
+        height 3rem
         .scroll-box
           height 100%
-          width auto
+          width 158vh
         .scroll-list
           position relative
-          float left
+          display inline-block
           width 2rem
           height 100%
           margin 0 .16rem
           background-size contain
           background-repeat no-repeat
+          .top-box
+            position absolute
+            width .84rem
+            top -.06rem
+            z-index 1
+            .top-list
+              width 100%
+          .img-box
+            position absolute
+            top 0
+            left 0
+            width 2rem
+            height 2rem
+            .img-list
+              width 100%
           .image
             max-width 100%
-          .img-desc
+          .img-info
             position absolute
-            bottom .1rem
+            bottom .2rem
             width 100%
             font-size .24rem
             line-height .36rem
             text-align center
+            .img-desc
+              ellipsis()
             .money
               font-size .24rems
               color #ff8300
             .money-num
               font-size .28rem
               margin-left -.04rem
-          &:nth-child(1)
-            background-image url('http://img1.qunarzz.com/sight/p0/201403/11/1f70100804193c28f8b71378c0faa49e.jpg_250x250_719a8492.jpg')
-          &:nth-child(2)
-            background-image url('http://img1.qunarzz.com/sight/p0/1603/56/56758da4c81e45d990.img.png_250x250_8a58d459.png')
-          &:nth-child(3)
-            background-image url('http://img1.qunarzz.com/sight/p0/1503/55/5577ab22b2e205d0.water.jpg_250x250_25866cfb.jpg')
-          &:nth-child(4)
-            background-image url('http://img1.qunarzz.com/sight/p0/1903/fe/feea19ebd8ed685ba3.img.jpg_250x250_c56db033.jpg')
 </style>

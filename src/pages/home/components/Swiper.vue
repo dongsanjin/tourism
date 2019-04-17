@@ -30,6 +30,7 @@ export default {
     }
   }
 }
+
 </script>
 <style scoped lang="stylus">
   .wrapper >>> .swiper-pagination-bullet-active

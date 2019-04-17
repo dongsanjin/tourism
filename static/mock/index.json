@@ -7,11 +7,35 @@
     },
     "swiperList": [{
       "id": "0001",
-      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/eb47a432471be6ac40b69828676479dd.jpg_750x200_207de9c6.jpg"
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/389d0194766566f8f1185aa19b759c25.jpg_750x200_22620261.jpg"
     },
     {
       "id": "0002",
-      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/f8675864efa49385315a488009f7028a.jpg_750x200_52b0d4bf.jpg"
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg"
+    },
+    {
+      "id": "0003",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/26c9b54e3e02d3724f614883d77a62c6.jpg_750x200_57aa8efa.jpg"
+    },
+    {
+      "id": "0004",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
+    },
+    {
+      "id": "0005",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/3e6806b986cac0dc7767573d0b6b3911.jpg_750x200_f3e8afe2.jpg"
+    },
+    {
+      "id": "0006",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/942d87cc1576c333c77dc1f86af145cd.jpg_750x200_d25bf3eb.jpg"
+    },
+    {
+      "id": "0007",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/a9658b2ee2c2c6de227c9710a8b04d48.jpg_750x200_f38fba28.jpg"
+    },
+    {
+      "id": "0008",
+      "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/eb47a432471be6ac40b69828676479dd.jpg_750x200_207de9c6.jpg"
     }],
     "iconList": [{
       "id": "0001",
@@ -62,6 +86,70 @@
       "id": "0010",
       "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/17/99402a22ce4af302.png",
       "desc": "东湖绿道"
-    }]
+    }],
+    "scrollItem":[
+      {
+        "id": "1",
+        "topUrl": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201403/11/1f70100804193c28f8b71378c0faa49e.jpg_250x250_719a8492.jpg",
+        "desc": "户部巷",
+        "money": 65
+      },
+      {
+        "id": "2",
+        "topUrl": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1603/56/56758da4c81e45d990.img.png_250x250_8a58d459.png",
+        "desc": "武汉东湖风景区",
+        "money": 32
+      },
+      {
+        "id": "3",
+        "topUrl": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1503/55/5577ab22b2e205d0.water.jpg_250x250_25866cfb.jpg",
+        "desc": "黄鹤楼",
+        "money": 65
+      },
+      {
+        "id": "4",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1903/fe/feea19ebd8ed685ba3.img.jpg_250x250_c56db033.jpg",
+        "desc": "东湖樱园",
+        "money": 32
+      },
+      {
+        "id": "5",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1805/af/af648beb7239c330a3.img.png_250x250_84f636a5.png",
+        "desc": "武汉花博汇",
+        "money": 49.8
+      },
+      {
+        "id": "6",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1903/6f/6f29fcae9632db9aa3.water.jpg_250x250_68947947.jpg",
+        "desc": "武汉欢乐谷",
+        "money": 90
+      },
+      {
+        "id": "7",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1412/1a/ad942d69c7fe7aa5aba971dedf28c1c5.water.jpg_250x250_5710f923.jpg",
+        "desc": "武汉大学",
+        "money": 32
+      },
+      {
+        "id": "8",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1703/a4/a4357d1a8afc001da3.water.jpg_250x250_864309d5.jpg",
+        "desc": "武汉东湖磨山",
+        "money": 32
+      },
+      {
+        "id": "9",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1504/47/4730a0c01664b63d.water.jpg_250x250_5c8de3a0.jpg",
+        "desc": "武汉海昌极地海洋公园",
+        "money": 180
+      },{
+        "id": "10",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1805/f9/f9fa2c4b30dc9f5aa3.img.jpg_250x250_0d433e43.jpg",
+        "desc": "木兰天池",
+        "money": 48
+      }
+    ]
   }
 }
