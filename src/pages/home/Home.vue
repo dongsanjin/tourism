@@ -6,6 +6,7 @@
     <home-list :scrollItem="scrollItem"></home-list>
     <home-link :linkList="linkList"></home-link>
     <home-weekend></home-weekend>
+    <home-footer></home-footer>
   </div>
 </template>
 <script>
@@ -15,6 +16,7 @@ import HomeIcons from './components/Icons'
 import HomeWeekend from './components/Weekend'
 import HomeList from './components/List'
 import HomeLink from './components/Link'
+import HomeFooter from './components/Footer'
 import axios from 'axios'
 export default {
   name: 'Home',
@@ -24,7 +26,8 @@ export default {
     HomeIcons,
     HomeList,
     HomeLink,
-    HomeWeekend
+    HomeWeekend,
+    HomeFooter
   },
   data () {
     return {
