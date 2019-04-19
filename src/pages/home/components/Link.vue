@@ -8,38 +8,43 @@
     </section>
     <section class="location">
       <ul>
-        <li class="location-info border-bottom">
+        <li class="location-info border-bottom" v-for="list of linkList" :key="list.id">
           <div class="location-wrapper">
             <div class="location-left">
-              <img class="img-file" src="http://img1.qunarzz.com/sight/p0/1504/47/4730a0c01664b63d.water.jpg_200x200_d7f52253.jpg" alt="">
-              <div class="img-bg">可订明日</div>
+              <img class="img-file" :src="list.imgUrl" alt="">
+              <div class="img-bg bg-orange" v-if="list.bgOrange">{{list.time}}</div>
+              <div class="img-bg bg-blue" v-else>{{list.time}}</div>
             </div>
             <div class="location-right">
-              <p class="title">武汉海昌极地海洋公园</p>
-              <p class="assess"><i class="iconfont star">&#xe600;&#xe600;&#xe600;&#xe600;&#xe600;</i><span class="sum">19067</span>评论</p>
-              <p class="price"><span class="money-symbol money-color">￥</span><span class="money money-color">180</span>起<span class="area">东西湖区</span></p>
-              <p class="location-merit">在“海底两万里”鱼你共舞</p>
+              <p class="title">{{list.title}}</p>
+              <p class="assess"><i class="iconfont star">&#xe600;&#xe600;&#xe600;&#xe600;&#xe600;</i><span class="sum">{{list.sum}}</span>评论</p>
+              <p class="price"><span class="money-symbol money-color">￥</span><span class="money money-color">{{list.money}}</span>起<span class="area">{{list.area}}</span></p>
+              <p class="location-merit" v-if="list.merit">在“海底两万里”鱼你共舞</p>
             </div>
           </div>
         </li>
       </ul>
     </section>
+    <section class="more">
+      查看所有产品
+    </section>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomeLink'
+  name: 'HomeLink',
+  props: {
+    linkList: Array
+  }
 }
 </script>
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
   .wrapper
-    height 50vh
     background-color #fff
     margin-top .2rem
-    padding .3rem .2rem
+    padding .3rem .2rem 0
     overflow hidden
-    box-sizing border-box
     .title
       font-size .32rem
       .img-box
@@ -49,8 +54,10 @@ export default {
           width 100%
           vertical-align baseline
     .location
-      margin-top .5rem
+      overflow hidden
+      margin-top .3rem
       .location-info
+        padding .2rem 0
         .location-wrapper
           display flex
           overflow hidden
@@ -64,19 +71,22 @@ export default {
               left 0
               width 1.02rem
               height .38rem
-              background-image url('https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png')
               background-size cover
               font-size .2rem
               line-height .38rem
               text-align center
               color #fff
+            .bg-orange
+              background-image url(https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png)
+            .bg-blue
+              background-image:url(https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png)
             .img-file
               width 100%
           .location-right
             overflow hidden
             position relative
             flex 1
-            margin .32rem .2rem .2rem
+            margin .32rem .2rem 0
             .title
               font-size .32rem
             .assess
@@ -105,4 +115,9 @@ export default {
               line-height .4rem
               font-size .2rem
               color #f55
+    .more
+      font-size .28rem
+      line-height .8rem
+      color #00afc7
+      text-align center
 </style>
