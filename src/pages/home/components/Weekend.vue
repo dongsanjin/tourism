@@ -72,6 +72,7 @@ export default {
   .attractions-info
     height 1rem
     padding .1rem 0
+    background-color #fff
     .attractions-title
       height .6rem
       line-height .6rem
