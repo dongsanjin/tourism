@@ -106,7 +106,7 @@ export default {
                 color $moneyColor
               .money
                 font-size .4rem
-                margin-left -.1rem
+                margin-left -.04rem
             .area
               float right
             .location-merit
