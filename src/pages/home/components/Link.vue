@@ -8,7 +8,7 @@
     </section>
     <section class="location">
       <ul>
-        <li class="location-info border-bottom" v-for="list of linkList" :key="list.id">
+        <router-link tag="li" :to="'/details/' + list.id" class="location-info border-bottom" v-for="list of linkList" :key="list.id">
           <div class="location-wrapper">
             <div class="location-left">
               <img class="img-file" :src="list.imgUrl" alt="">
@@ -22,7 +22,7 @@
               <p class="location-merit" v-if="list.merit">在“海底两万里”鱼你共舞</p>
             </div>
           </div>
-        </li>
+        </router-link>
       </ul>
     </section>
     <section class="more">
