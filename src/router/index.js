@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
 import Details from '@/pages/details/Details'
+import Album from '@/common/Album'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/details/:id',
       name: 'Details',
       component: Details
+    },
+    {
+      path: '/album',
+      name: 'Album',
+      component: Album
     }
   ]
 })

@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="img-wrapper">
-      <img class="img-file" src="//img1.qunarzz.com/sight/p0/1501/10/1012e4a2c398409c.water.jpg_600x330_3321a6b0.jpg" alt="">
+      <router-link to="/album">
+        <img class="img-file" src="//img1.qunarzz.com/sight/p0/1501/10/1012e4a2c398409c.water.jpg_600x330_3321a6b0.jpg" alt="">
+      </router-link>
       <router-link tag="div" to="/" class="back-header iconfont">&#xe624;</router-link>
       <div class="img-info">
         <p class="img-num"><span class="iconfont">&#xe859;</span>19</p>
