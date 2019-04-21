@@ -44,7 +44,7 @@
           {{popularCity}}
         </div>
         <ul class="popular-list-wrapper">
-          <li class="popular-list" v-for="item of outerPopularCityList" :key="item.id">{{item.listName}}</li>
+          <li class="popular-list" v-for="item of outerPopularCityList" :key="item.id" @click="handleCityClick(item.listName)">{{item.listName}}</li>
         </ul>
       </div>
 
@@ -54,17 +54,17 @@
           {{letterSort}}
         </div>
         <ul class="letter-list-wrapper">
-          <li class="letter-list" v-for="item of letterList" :key="item.id">{{item.letterName}}</li>
+          <li class="letter-list" v-for="item of overseasLetterList" :key="item.id" @click="goArea">{{item.letterName}}</li>
         </ul>
       </div>
 
       <!-- 通过字母来区分的所有境外城市 -->
-      <div class="area all-city" v-for="item of allCityList" :key="item.id" :id="item.title">
+      <div class="area all-city" v-for="item of allOverseasCityList" :key="item.id" :ref="item.title" :id="item.title">
         <div class="area-title">
           {{item.title}}
         </div>
         <ul class="all-city-list-wrapper">
-          <li class="all-list" v-for="list of item.cityList" :key="list.id">{{list.cityName}}</li>
+          <li class="all-list" v-for="list of item.cityList" :key="list.id" @click="handleCityClick(list.cityName)">{{list.cityName}}</li>
         </ul>
       </div>
     </div>
@@ -83,7 +83,9 @@ export default {
     outerPopularCityList: Array,
     letterList: Array,
     allCityList: Array,
-    selected: Boolean
+    selected: Boolean,
+    allOverseasCityList: Array,
+    overseasLetterList: Array
   },
   data () {
     return {

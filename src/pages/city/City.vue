@@ -3,7 +3,7 @@
     <city-header :selectCity="selectCity"></city-header>
     <city-territory @sendSelectedValue="changeSelectedValue" :selected="selected"></city-territory>
     <city-list :popularCity="popularCity" :letterSort="letterSort" :popularCityList="popularCityList"
-    :letterList="letterList" :allCityList="allCityList" :outerPopularCityList="outerPopularCityList" :selected="selected"></city-list>
+    :letterList="letterList" :allCityList="allCityList" :outerPopularCityList="outerPopularCityList" :selected="selected" :allOverseasCityList="allOverseasCityList" :overseasLetterList="overseasLetterList"></city-list>
   </div>
 </template>
 <script>
@@ -27,7 +27,9 @@ export default {
       popularCityList: [],
       outerPopularCityList: [],
       letterList: [],
-      allCityList: []
+      allCityList: [],
+      allOverseasCityList: [],
+      overseasLetterList: []
     }
   },
   methods: {
@@ -46,6 +48,8 @@ export default {
         this.letterList = data.letterList
         this.allCityList = data.allCityList
         this.outerPopularCityList = data.outerPopularCityList
+        this.allOverseasCityList = data.allOverseasCityList
+        this.overseasLetterList = data.overseasLetterList
       }
     },
     changeSelectedValue (val) {
