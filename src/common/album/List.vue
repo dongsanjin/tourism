@@ -2,7 +2,7 @@
   <div>
     <div class="wrapper">
       <ul>
-        <li class="img-box" v-for="item of imgList" :key="item.id" @click="handleShowAlbum">
+        <li class="img-box" v-for="(item, index) of imgList" :key="item.id" @click="handleShowAlbum(index)">
           <img class="img-list" :src="item.imgUrl">
         </li>
       </ul>
@@ -27,7 +27,8 @@ export default {
       showAlbum: false,
       swiperOptions: {
         pagination: '.swiper-pagination',
-        paginationType: 'fraction'
+        paginationType: 'fraction',
+        initialSlide: 0
       },
       imgList: [
         {
@@ -140,11 +141,15 @@ export default {
     }
   },
   methods: {
-    handleShowAlbum () {
+    handleShowAlbum (index) {
       this.showAlbum = true
+      this.emitIndex(index)
     },
     changeShowAlbum () {
       this.showAlbum = false
+    },
+    emitIndex (index) {
+      this.swiperOptions.initialSlide = index
     }
   }
 }
