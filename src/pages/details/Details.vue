@@ -1,20 +1,22 @@
 <template>
   <div>
     <banner></banner>
-    <header></header>
+    <details-header></details-header>
+    <div class="h"></div>
   </div>
 </template>
 <script>
 import Banner from './components/Banner'
-import Header from './components/Header'
+import DetailsHeader from './components/Header'
 export default {
   name: 'Details',
   components: {
     Banner,
-    Header
+    DetailsHeader
   }
 }
 </script>
 <style lang="stylus" scoped>
-
+  .h
+    height 20rem
 </style>
