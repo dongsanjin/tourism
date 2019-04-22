@@ -5,6 +5,7 @@
     <details-attractions></details-attractions>
     <details-recommend></details-recommend>
     <details-assess></details-assess>
+    <details-other></details-other>
     <div class="h"></div>
   </div>
 </template>
@@ -14,6 +15,7 @@ import DetailsHeader from './components/Header'
 import DetailsAttractions from './components/Attractions'
 import DetailsRecommend from './components/Recommend'
 import DetailsAssess from './components/Assess'
+import DetailsOther from './components/Other'
 export default {
   name: 'Details',
   components: {
@@ -21,7 +23,8 @@ export default {
     DetailsHeader,
     DetailsRecommend,
     DetailsAttractions,
-    DetailsAssess
+    DetailsAssess,
+    DetailsOther
   }
 }
 </script>
