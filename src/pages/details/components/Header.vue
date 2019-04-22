@@ -22,6 +22,7 @@ export default {
   methods: {
     handleScroll () {
       let top = document.documentElement.scrollTop
+      console.log('触发scroll')
       if (top > 10) {
         let opacity = top / 180
         opacity = opacity >= 1 ? 1 : opacity
@@ -34,8 +35,11 @@ export default {
       }
     }
   },
-  mounted () {
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
