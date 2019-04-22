@@ -6,7 +6,7 @@
     <details-recommend></details-recommend>
     <details-assess></details-assess>
     <details-other></details-other>
-    <div class="h"></div>
+    <details-footer></details-footer>
   </div>
 </template>
 <script>
@@ -16,21 +16,26 @@ import DetailsAttractions from './components/Attractions'
 import DetailsRecommend from './components/Recommend'
 import DetailsAssess from './components/Assess'
 import DetailsOther from './components/Other'
+import DetailsFooter from './components/Footer'
 export default {
   name: 'Details',
+  data () {
+    return {
+      showDesc: false
+    }
+  },
   components: {
     Banner,
     DetailsHeader,
     DetailsRecommend,
     DetailsAttractions,
     DetailsAssess,
-    DetailsOther
+    DetailsOther,
+    DetailsFooter
   }
 }
 </script>
 <style lang="stylus" scoped>
   .wrapper
       background-color #f5f5f5
-    .h
-      height 20rem
 </style>
