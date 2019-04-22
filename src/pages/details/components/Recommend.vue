@@ -34,29 +34,8 @@
 <script>
 export default {
   name: 'Recommend',
-  data () {
-    return {
-      locationList: [
-        {
-          title: 'Q木兰云雾山门票成人票',
-          self: true,
-          retreat: true,
-          moneyNum: 60
-        },
-        {
-          title: '【高尚】云雾山成人票',
-          self: false,
-          retreat: true,
-          moneyNum: 58
-        },
-        {
-          title: '木兰云雾山学生/儿童/老人票',
-          self: false,
-          retreat: true,
-          moneyNum: 35
-        }
-      ]
-    }
+  props: {
+    locationList: Array
   }
 }
 </script>

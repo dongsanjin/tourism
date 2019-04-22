@@ -30,59 +30,8 @@
 <script>
 export default {
   name: 'Other',
-  data () {
-    return {
-      otherlist: [
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1412/3f/f4d858b40070a2232c1f2ffb74d5e2aa.water.jpg_228x168_a77fa3ab.jpg',
-          title: '锦里沟',
-          level: '(4A)',
-          assessNum: 2620,
-          area: '武汉·黄陂区',
-          moneyNum: 55
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1805/f9/f9fa2c4b30dc9f5aa3.img.jpg_228x168_815be30f.jpg',
-          title: '木兰天池',
-          level: '(5A)',
-          assessNum: 6290,
-          area: '武汉·黄陂区',
-          moneyNum: 48
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201212/20/aef8ac7cbef2738d93835fbb.jpg_228x168_745d565e.jpg',
-          title: '木兰清凉寨',
-          level: '(4A)',
-          assessNum: 916,
-          area: '武汉·黄陂区',
-          moneyNum: 32
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/wugc/p35/201207/25/12403d5b2a3b747e93835fbb.jpg_228x168_2dee6672.jpg',
-          title: '木兰山',
-          level: '(4A)',
-          assessNum: 388,
-          area: '武汉·黄陂区',
-          moneyNum: 53.5
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1501/f8/f8413365ed3e77ab.water.jpg_228x168_8707598b.jpg',
-          title: '木兰草原',
-          level: '(5A)',
-          assessNum: 6287,
-          area: '武汉·黄陂区',
-          moneyNum: 64.5
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1506/8b/9c2d25a9ea774f7ab6480eed523eeca8.water.jpg_228x168_f4460b69.jpg',
-          title: '武汉姚家山旅游风景区',
-          level: '',
-          assessNum: 67,
-          area: '武汉·黄陂区',
-          moneyNum: 57
-        }
-      ]
-    }
+  props: {
+    otherlist: Array
   }
 }
 </script>

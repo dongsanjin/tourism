@@ -2,8 +2,8 @@
   <div class="Attractions-info">
       <section class="info-wrapper">
         <div class="evaluation-box">
-          <p class="evaluation"><span class="fraction">4.8</span>分 很棒</p>
-          <p class="desc">1318条评论</p>
+          <p class="evaluation"><span class="fraction">{{attractionsObj.num}}</span>分 很棒</p>
+          <p class="desc">{{attractionsObj.sum}}条评论</p>
           <span class="iconfont more">&#xe643;</span>
         </div>
         <div class="introduction-box">
@@ -14,14 +14,17 @@
       </section>
       <section class="location">
         <span class="iconfont location-icon">&#xe601;</span>
-        湖北省武汉市黄陂区泡桐店境内
+        {{attractionsObj.location}}
         <span class="iconfont more">&#xe643;</span>
       </section>
     </div>
 </template>
 <script>
 export default {
-  name: 'Attractions'
+  name: 'Attractions',
+  props: {
+    attractionsObj: Object
+  }
 }
 </script>
 <style lang="stylus" scoped>

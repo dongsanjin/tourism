@@ -3,13 +3,16 @@
     <router-link tag="div" to="/" class="back-header iconfont" v-if="showBack">&#xe624;</router-link>
     <div class="wrapper" v-if="showHeader" :style="opacityShow">
       <router-link tag="span" to="/" class="iconfont back-index">&#xe624;</router-link>
-      云雾山
+      {{headerTitle}}
     </div>
   </div>
 </template>
 <script>
 export default {
   name: 'Header',
+  props: {
+    headerTitle: String
+  },
   data () {
     return {
       showBack: true,
