@@ -4,6 +4,7 @@
     <details-header></details-header>
     <details-attractions></details-attractions>
     <details-recommend></details-recommend>
+    <details-assess></details-assess>
     <div class="h"></div>
   </div>
 </template>
@@ -12,13 +13,15 @@ import Banner from './components/Banner'
 import DetailsHeader from './components/Header'
 import DetailsAttractions from './components/Attractions'
 import DetailsRecommend from './components/Recommend'
+import DetailsAssess from './components/Assess'
 export default {
   name: 'Details',
   components: {
     Banner,
     DetailsHeader,
     DetailsRecommend,
-    DetailsAttractions
+    DetailsAttractions,
+    DetailsAssess
   }
 }
 </script>
