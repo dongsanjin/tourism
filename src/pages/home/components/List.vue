@@ -37,7 +37,6 @@
 
 <script>
 import BScroll from 'better-scroll'
-
 export default {
   name: 'HomeList',
   props: {
@@ -57,7 +56,10 @@ export default {
         eventPassthrough: 'vertical',
         bounce: false,
         momentum: true,
-        scrollbar: true
+        scrollbar: {
+          fade: true,
+          interactive: false
+        }
       })
       let scrollBox = this.$refs.scrollBox
       let timer = setInterval(() => {
@@ -82,6 +84,8 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
+  .outer-wrapper >>> .bscroll-indicator
+    height 80% !important
   .outer-wrapper
     padding 0.1rem
     background-color #fff
