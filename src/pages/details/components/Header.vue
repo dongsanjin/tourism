@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header">
     <router-link tag="div" to="/" class="back-header iconfont" v-if="showBack">&#xe624;</router-link>
     <div class="wrapper" v-if="showHeader" :style="opacityShow">
       <router-link tag="span" to="/" class="iconfont back-index">&#xe624;</router-link>
@@ -22,7 +22,6 @@ export default {
   methods: {
     handleScroll () {
       let top = document.documentElement.scrollTop
-      console.log('触发scroll')
       if (top > 10) {
         let opacity = top / 180
         opacity = opacity >= 1 ? 1 : opacity
