@@ -1,6 +1,6 @@
 # tourism
 
-> A Vue.js project
+> 利用vue-cli脚手架搭建的一个基于vue2.5版本的web项目
 
 ## Build Setup
 
